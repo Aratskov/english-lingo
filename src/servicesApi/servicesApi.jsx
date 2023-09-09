@@ -96,14 +96,11 @@ export const getFavoritesAPI = async ({ localId, idToken }) => {
 
 export const removeFavoriteApi = async ({ id, localId, idToken }) => {
   setBaseUrl(baseUrl.DB);
-  console.log(id);
   const { data } = await axios.delete(`/users/${localId}/favorite/${id}.json`, {
     params: {
       auth: idToken,
     },
   });
-
-  console.log("data remove", data);
   return data;
 };
 

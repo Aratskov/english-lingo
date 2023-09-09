@@ -30,7 +30,6 @@ const teachersSlice = createSlice({
         state.favorites.push(payload);
       })
       .addCase(removeFavorites.fulfilled, (state, { payload }) => {
-        console.log(payload);
         state.favorites = state.favorites.filter((el) => el.id !== payload);
       })
       .addCase(logout, (state) => {

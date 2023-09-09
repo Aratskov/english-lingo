@@ -1,10 +1,10 @@
-import { useFormik } from "formik";
+import { useFormik } from 'formik';
 import {
   validationSchemaLogin,
   validationSchemaRegister,
-} from "../SchemaValidation/SchemaValidation";
-import { BackdropModal } from "../BackdropModal/BackdropModal";
-import { useNavigate } from "react-router-dom";
+} from '../SchemaValidation/SchemaValidation';
+import { BackdropModal } from '../BackdropModal/BackdropModal';
+import { useNavigate } from 'react-router-dom';
 import {
   Modal,
   CloseButton,
@@ -15,11 +15,12 @@ import {
   Button,
   TextError,
   ToggleBtn,
-} from "./AuthForm.styled";
-import Icon from "../../assets/icons/close.svg";
-import { loginUser, registerUser } from "../../redux/auth/authOperation";
-import { useDispatch } from "react-redux";
-import { useState } from "react";
+} from './AuthForm.styled';
+import Icon from '../../assets/icons/close.svg';
+import { loginUser, registerUser } from '../../redux/auth/authOperation';
+import { useDispatch } from 'react-redux';
+import { useState } from 'react';
+import icons from '../../assets/icons/password.svg';
 
 export const AuthForm = ({ isRegister }) => {
   const navigate = useNavigate();
@@ -28,14 +29,14 @@ export const AuthForm = ({ isRegister }) => {
 
   const formik = useFormik({
     initialValues: {
-      email: "",
-      password: "",
-      userName: "",
+      email: '',
+      password: '',
+      userName: '',
     },
     validationSchema: isRegister
       ? validationSchemaRegister
       : validationSchemaLogin,
-    onSubmit: (values) => {
+    onSubmit: values => {
       isRegister ? dispatch(registerUser(values)) : dispatch(loginUser(values));
     },
   });
@@ -52,11 +53,11 @@ export const AuthForm = ({ isRegister }) => {
             <use href={`${Icon}#icon-close`} />
           </svg>
         </CloseButton>
-        <Title>{isRegister ? "Registration" : "Log In"}</Title>
+        <Title>{isRegister ? 'Registration' : 'Log In'}</Title>
         <SecondText>
           {isRegister
-            ? "Thank you for your interest in our platform! In order to register, we need some information. Please provide us with the following information"
-            : "Welcome back! Please enter your credentials to access your account and continue your search for an teacher."}
+            ? 'Thank you for your interest in our platform! In order to register, we need some information. Please provide us with the following information'
+            : 'Welcome back! Please enter your credentials to access your account and continue your search for an teacher.'}
         </SecondText>
         <form onSubmit={formik.handleSubmit}>
           <Form>
@@ -89,23 +90,31 @@ export const AuthForm = ({ isRegister }) => {
               )}
             </label>
 
-            <label htmlFor="password" style={{ position: "relative" }}>
+            <label htmlFor="password" style={{ position: 'relative' }}>
               <Input
                 id="password"
                 name="password"
-                type={showPassword ? "text" : "password"}
+                type={showPassword ? 'text' : 'password'}
                 onChange={formik.handleChange}
                 value={formik.values.password}
                 placeholder="Password"
               />
-              <ToggleBtn onClick={togglePassword} />
+              {/* <ToggleBtn onClick={togglePassword}>{showPassword ? null : null}</ToggleBtn> */}
+
+              <ToggleBtn onClick={togglePassword}>
+                <use
+                  href={
+                    showPassword ? `${icons}#icon-eye` : `${icons}#icon-antiEye`
+                  }
+                ></use>
+              </ToggleBtn>
 
               {formik.touched.password && formik.errors.password && (
                 <TextError>{formik.errors.password}</TextError>
               )}
             </label>
           </Form>
-          <Button type="submit">{isRegister ? "Sign Up" : "Log In"} </Button>
+          <Button type="submit">{isRegister ? 'Sign Up' : 'Log In'} </Button>
         </form>
       </Modal>
     </BackdropModal>

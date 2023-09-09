@@ -15,7 +15,6 @@ export const PrioritySelect = () => {
   const uniqueLanguage = useSelector(selectUniqueLanguage);
 
   const handleFilterChange = (selectedItems) => {
-    console.log(selectedItems[0].value);
     if (selectedItems.length > 0) {
       const selectedMake = selectedItems[0].value;
       dispatch(changeFilterLanguage(selectedMake));

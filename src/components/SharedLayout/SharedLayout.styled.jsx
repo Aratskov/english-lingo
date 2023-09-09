@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { NavLink } from "react-router-dom";
+import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 export const WrapContainer = styled.div`
   display: flex;
@@ -144,13 +144,11 @@ export const ButtonRegister = styled(NavLink)`
 
   cursor: pointer;
 
-  &:hover{
-  /* background-color: #565657; */
-  background-color: #FFDC86;
-  /* color:#f4c550; */
+  &:hover {
+    background-color: #ffdc86;
   }
 
-   @media screen and (max-width: 1069px) {
+  @media screen and (max-width: 1069px) {
     display: none;
   }
 `;

@@ -108,7 +108,7 @@ export const TextError = styled.p`
   font-size: 10px;
 `;
 
-export const ToggleBtn = styled.div`
+export const ToggleBtn = styled.svg`
   position: absolute;
   top: 50%;
   right: 15px;
@@ -116,7 +116,12 @@ export const ToggleBtn = styled.div`
   width: 20px;
   height: 20px;
 
-  background-color: green;
+  stroke: currentColor;
+  fill: currentColor;
 
+  opacity: 0.5;
+  
   cursor: pointer;
 `;
+
+
