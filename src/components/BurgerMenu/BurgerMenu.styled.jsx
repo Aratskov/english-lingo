@@ -1,5 +1,5 @@
-import { NavLink } from "react-router-dom";
-import styled from "styled-components";
+import { NavLink } from 'react-router-dom';
+import styled from 'styled-components';
 
 export const BurgerMenuContainer = styled.div`
   position: fixed;
@@ -8,6 +8,7 @@ export const BurgerMenuContainer = styled.div`
   height: 100vh;
   width: 100vw;
   background-color: white;
+  overflow-x: auto;
 `;
 
 export const CloseButton = styled.button`
@@ -33,9 +34,11 @@ export const CloseButton = styled.button`
 export const BurgerMenuList = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  height: 100%;
+
+  height: 100vh;
+  min-height: 500px;
 `;
 
 export const Nav = styled.nav`
@@ -55,5 +58,61 @@ export const LinkStyled = styled(NavLink)`
   &:hover:not(.active) {
     color: #f4c550;
     transform: scale(1.2);
+  }
+`;
+
+export const BtnLogOut = styled.button`
+  width: 100%;
+  height: 50px;
+  background-color: #f4c550;
+  color: #fff;
+
+  font-size: 24px;
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 1.5;
+
+  border-radius: 12px;
+  border: transparent;
+  outline: transparent;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: #ffdc86;
+  }
+`;
+
+export const WrapAuth = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+`;
+
+export const BtnAuth = styled(NavLink)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40vw;
+  min-width: 160px;
+  height: 50px;
+  background-color: #f4c550;
+  color: #fff;
+
+  font-size: 24px;
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 1.5;
+
+  border-radius: 12px;
+  border: transparent;
+  outline: transparent;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: #ffdc86;
   }
 `;

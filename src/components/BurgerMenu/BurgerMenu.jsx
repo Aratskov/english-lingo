@@ -1,5 +1,5 @@
-import { useDispatch, useSelector } from "react-redux";
-import { BiX } from "react-icons/bi";
+import { useDispatch, useSelector } from 'react-redux';
+import { BiX } from 'react-icons/bi';
 
 import {
   BurgerMenuContainer,
@@ -7,13 +7,16 @@ import {
   Nav,
   LinkStyled,
   CloseButton,
-} from "./BurgerMenu.styled";
-import { createPortal } from "react-dom";
+  BtnLogOut,
+  BtnAuth,
+  WrapAuth
+} from './BurgerMenu.styled';
+import { createPortal } from 'react-dom';
 
-import { isAuthSelect } from "../../redux/auth/authSelect";
-import { logout } from "../../redux/auth/authSlice";
+import { isAuthSelect } from '../../redux/auth/authSelect';
+import { logout } from '../../redux/auth/authSlice';
 
-const modalRoot = document.querySelector("#modal-auth-root");
+const modalRoot = document.querySelector('#modal-auth-root');
 
 export const BurgerMenu = ({ onClick }) => {
   const isAuth = useSelector(isAuthSelect);
@@ -21,39 +24,30 @@ export const BurgerMenu = ({ onClick }) => {
 
   return createPortal(
     <BurgerMenuContainer>
-      <CloseButton onClick={onClick}><BiX/></CloseButton>
-      <BurgerMenuList>
-        <Nav>
-          <LinkStyled to="/" onClick={onClick}>
-            Home
-          </LinkStyled>
-          <LinkStyled to="/teachers" onClick={onClick}>
-            Teachers
-          </LinkStyled>
-          {isAuth && <LinkStyled to="/favorites">Favorites</LinkStyled>}
-        </Nav>
-        <div>
-           {isAuth ? (
-          <button onClick={() => dispatch(logout())}>LogOut</button>
-        ) : (
-            <>
-              <button>Login</button>
-              <button>Register</button>
-
-            {/* <WrapLogin to={getLoginRoute()}>
-                    <SVG>
-                      <USE href={`${Icons}#icon-log-in`} />
-                    </SVG>
-
-                    <ButtonText>Log In</ButtonText>
-                  </WrapLogin>
-                  <ButtonRegister to={getRegisterRoute()}>
-                    Registration
-                  </ButtonRegister> */}
-          </>
-        )}
-       </div>
-      </BurgerMenuList>
+      <div style={{ padding: '0 15px' }}>
+        <CloseButton onClick={onClick}>
+          <BiX />
+        </CloseButton>
+        <BurgerMenuList>
+          <Nav>
+            <LinkStyled to="/" onClick={onClick}>
+              Home
+            </LinkStyled>
+            <LinkStyled to="/teachers" onClick={onClick}>
+              Teachers
+            </LinkStyled>
+            {isAuth && <LinkStyled to="/favorites" onClick={onClick}>Favorites</LinkStyled>}
+          </Nav>
+          {isAuth ? (
+            <BtnLogOut onClick={() => dispatch(logout())}>LogOut</BtnLogOut>
+          ) : (
+              <WrapAuth>
+                <BtnAuth to='/login'>Login</BtnAuth>
+                <BtnAuth to='/register'>Register</BtnAuth>
+            </WrapAuth>
+          )}
+        </BurgerMenuList>
+      </div>
     </BurgerMenuContainer>,
     modalRoot
   );

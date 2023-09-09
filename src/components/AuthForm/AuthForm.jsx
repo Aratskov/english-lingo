@@ -99,8 +99,6 @@ export const AuthForm = ({ isRegister }) => {
                 value={formik.values.password}
                 placeholder="Password"
               />
-              {/* <ToggleBtn onClick={togglePassword}>{showPassword ? null : null}</ToggleBtn> */}
-
               <ToggleBtn onClick={togglePassword}>
                 <use
                   href={
