@@ -1,3 +1,5 @@
+import { MarkupTeachersList } from "components/MarkupTeachersList/MarkupTeachersList";
+
 export const Favorites = () => {
-  return <div>Favorites</div>;
+  return <MarkupTeachersList isFavorits={true} />;
 };
