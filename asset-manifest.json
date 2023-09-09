@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/english-lingo/static/css/main.7acaea2f.css",
-    "main.js": "/english-lingo/static/js/main.7a322972.js",
+    "main.js": "/english-lingo/static/js/main.acb7674a.js",
     "index.html": "/english-lingo/index.html",
     "main.7acaea2f.css.map": "/english-lingo/static/css/main.7acaea2f.css.map",
-    "main.7a322972.js.map": "/english-lingo/static/js/main.7a322972.js.map"
+    "main.acb7674a.js.map": "/english-lingo/static/js/main.acb7674a.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.7a322972.js"
+    "static/js/main.acb7674a.js"
   ]
 }
