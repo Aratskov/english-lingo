@@ -61,7 +61,7 @@ export const MarkupTeacherCard = ({ teacher }) => {
     if (isLiked) {
       dispatch(removeFavorites(id ? id : isLikedId));
     } else {
-      isAuth ? dispatch(addFavorites(teacher)) : navigate('/login');
+      isAuth ? dispatch(addFavorites(teacher)) : navigate('/teachers/login');
     }
   };
 
