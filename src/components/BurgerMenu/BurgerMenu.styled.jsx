@@ -8,7 +8,7 @@ export const BurgerMenuContainer = styled.div`
   height: 100vh;
   width: 100vw;
   background-color: white;
-  overflow-x: auto;
+  overflow-y: auto;
 `;
 
 export const CloseButton = styled.button`

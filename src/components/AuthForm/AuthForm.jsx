@@ -59,7 +59,7 @@ export const AuthForm = ({ isRegister }) => {
             ? 'Thank you for your interest in our platform! In order to register, we need some information. Please provide us with the following information'
             : 'Welcome back! Please enter your credentials to access your account and continue your search for an teacher.'}
         </SecondText>
-        <form onSubmit={formik.handleSubmit}>
+        <form onSubmit={formik.handleSubmit} style={{ overflowY: "auto"}}>
           <Form>
             {isRegister && (
               <label htmlFor="userName">

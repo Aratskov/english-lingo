@@ -9,7 +9,7 @@ import {
   CloseButton,
   BtnLogOut,
   BtnAuth,
-  WrapAuth
+  WrapAuth,
 } from './BurgerMenu.styled';
 import { createPortal } from 'react-dom';
 
@@ -36,14 +36,29 @@ export const BurgerMenu = ({ onClick }) => {
             <LinkStyled to="/teachers" onClick={onClick}>
               Teachers
             </LinkStyled>
-            {isAuth && <LinkStyled to="/favorites" onClick={onClick}>Favorites</LinkStyled>}
+            {isAuth && (
+              <LinkStyled to="/favorites" onClick={onClick}>
+                Favorites
+              </LinkStyled>
+            )}
           </Nav>
           {isAuth ? (
-            <BtnLogOut onClick={() => dispatch(logout())}>LogOut</BtnLogOut>
+            <BtnLogOut
+              onClick={() => {
+                dispatch(logout());
+                onClick();
+              }}
+            >
+              LogOut
+            </BtnLogOut>
           ) : (
-              <WrapAuth>
-                <BtnAuth to='/login'>Login</BtnAuth>
-                <BtnAuth to='/register'>Register</BtnAuth>
+            <WrapAuth>
+              <BtnAuth to="/login" onClick={onClick}>
+                Login
+              </BtnAuth>
+              <BtnAuth to="/register" onClick={onClick}>
+                Register
+              </BtnAuth>
             </WrapAuth>
           )}
         </BurgerMenuList>

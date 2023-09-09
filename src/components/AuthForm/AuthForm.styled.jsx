@@ -1,13 +1,23 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Modal = styled.div`
-  position: relative;
+  position: fixed;
   box-sizing: border-box;
-  width: 566px;
-  padding: 64px;
+  padding: 60px 30px;
 
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 30px 30px 0 0;
   background: #fff;
-  border-radius: 30px;
+
+  @media screen and (min-width: 450px) {
+    position: relative;
+
+    border-radius: 30px;
+    width: 566px;
+    padding: 64px;
+  }
 `;
 
 export const CloseButton = styled.button`
@@ -120,8 +130,6 @@ export const ToggleBtn = styled.svg`
   fill: currentColor;
 
   opacity: 0.5;
-  
+
   cursor: pointer;
 `;
-
-
