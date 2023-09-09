@@ -69,12 +69,9 @@ export const BurgerMenuButton = styled.button`
 `;
 
 export const LinkStyled = styled(NavLink)`
-  /* display: block; */
   padding: 15px 10px;
 
   line-height: 1.25;
-
-  /* text-align: center; */
 
   &.active {
     color: #f4c550;
@@ -135,7 +132,7 @@ export const ButtonRegister = styled(NavLink)`
 
   min-width: 168px;
   height: 48px;
-  background: #121417;
+  background-color: #121417;
 
   color: #fff;
   font-family: Roboto, sans-serif;
@@ -146,6 +143,12 @@ export const ButtonRegister = styled(NavLink)`
   border-radius: 12px;
 
   cursor: pointer;
+
+  &:hover{
+  /* background-color: #565657; */
+  background-color: #FFDC86;
+  /* color:#f4c550; */
+  }
 
    @media screen and (max-width: 1069px) {
     display: none;
