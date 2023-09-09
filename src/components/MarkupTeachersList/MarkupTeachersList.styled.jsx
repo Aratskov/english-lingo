@@ -1,10 +1,6 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.section`
-  /* padding: 32px 0; */
-  /* overflow-y: auto;
-  max-height: 90vh; */
-
   display: flex;
   flex-direction: column;
   align-items: center;

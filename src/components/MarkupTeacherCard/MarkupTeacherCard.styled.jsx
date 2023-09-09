@@ -25,17 +25,6 @@ export const WrapInfo = styled.div`
     line-height: 1.5;
   }
 
-  /* @media screen and (max-width: 444px) {
-    position: absolute;
-    top: 12px;
-    right: 8px;
-  }
-
-  @media screen and (min-width: 445px) and (max-width: 1244px) {
-    position: absolute;
-    top: 24px;
-    right: 24px;
-  } */
 
   @media screen and (min-width: 1244px) {
     margin-right: 64px;

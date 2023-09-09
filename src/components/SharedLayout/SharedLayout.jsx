@@ -67,8 +67,9 @@ export const SharedLayout = () => {
               {isAuth ? (
                 <MarkupButton
                   onClick={() => dispatch(logout())}
-                  title="logout"
+                  title="Log Out"
                   width="160px"
+                  variant="true"
                 />
               ) : (
                 <>

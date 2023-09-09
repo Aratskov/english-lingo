@@ -25,6 +25,9 @@ export const Button = styled.button`
   }
 
   @media screen and (max-width: 1069px) {
-    display: none;
+    ${({ variant }) => {
+    return `display: ${variant ? "none" : "block"}`;
+  }}
+    /* display: none; */
   }
 `;
