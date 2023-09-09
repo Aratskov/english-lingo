@@ -2,6 +2,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 import { PersistGate } from 'redux-persist/integration/react';
+import { LoaderProvider } from 'context/LoaderProvider';
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -13,7 +14,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter basename="/english-lingo">
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <App />
+        <LoaderProvider>
+          <App />
+        </LoaderProvider>
       </PersistGate>
     </Provider>
   </BrowserRouter>
