@@ -6,7 +6,7 @@ import { App } from 'components/App';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <BrowserRouter basename="/english-learn">
+    <BrowserRouter basename="/english-lingo">
       <App />
     </BrowserRouter>
 );
