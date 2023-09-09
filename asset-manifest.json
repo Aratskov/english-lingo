@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/english-lingo/static/css/main.7acaea2f.css",
+    "main.js": "/english-lingo/static/js/main.7a322972.js",
+    "index.html": "/english-lingo/index.html",
+    "main.7acaea2f.css.map": "/english-lingo/static/css/main.7acaea2f.css.map",
+    "main.7a322972.js.map": "/english-lingo/static/js/main.7a322972.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.7a322972.js"
+  ]
+}
