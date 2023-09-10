@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/english-lingo/static/css/main.28aee922.css",
-    "main.js": "/english-lingo/static/js/main.7b4a9038.js",
+    "main.js": "/english-lingo/static/js/main.be3e3f91.js",
     "static/media/women.png": "/english-lingo/static/media/women.a2340642d996ebc78bd6.png",
     "static/media/apple.svg": "/english-lingo/static/media/apple.dd4335f81e2b19b8dc67cd6ac14815cb.svg",
     "static/media/password.svg": "/english-lingo/static/media/password.3a22b8b87f5cf7f07554a86ac12ac5d8.svg",
@@ -13,10 +13,10 @@
     "static/media/monitor.svg": "/english-lingo/static/media/monitor.e9839adbbcd1148ec32524ced799b95f.svg",
     "static/media/close.svg": "/english-lingo/static/media/close.9fab558dba9055d988da694b2cd1b5a4.svg",
     "main.28aee922.css.map": "/english-lingo/static/css/main.28aee922.css.map",
-    "main.7b4a9038.js.map": "/english-lingo/static/js/main.7b4a9038.js.map"
+    "main.be3e3f91.js.map": "/english-lingo/static/js/main.be3e3f91.js.map"
   },
   "entrypoints": [
     "static/css/main.28aee922.css",
-    "static/js/main.7b4a9038.js"
+    "static/js/main.be3e3f91.js"
   ]
 }
