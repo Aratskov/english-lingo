@@ -10,12 +10,13 @@ export const Modal = styled.div`
   width: 100%;
   border-radius: 30px 30px 0 0;
   background: #fff;
+  
 
   @media screen and (min-width: 450px) {
     position: relative;
 
     border-radius: 30px;
-    width: 566px;
+    width: 600px;
     padding: 64px;
   }
 `;

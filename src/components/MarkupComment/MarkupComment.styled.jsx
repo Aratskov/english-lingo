@@ -9,6 +9,9 @@ export const Image = styled.img`
   height: 44px;
   width: 44px;
   border-radius: 100px;
+
+  background-color: #F4C550;
+
 `;
 
 export const Name = styled.p`

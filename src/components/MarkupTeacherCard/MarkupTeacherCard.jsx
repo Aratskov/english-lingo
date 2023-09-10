@@ -72,7 +72,6 @@ export const MarkupTeacherCard = ({ teacher }) => {
           <Image src={avatar_url} alt={surname} />
         </Wrapper>
       </ImageWrap>
-      {/* <div style={{ width: "968px", position: "relative" }}> */}
       <div>
         <ContainerContent>
           <WrapName>
@@ -138,7 +137,7 @@ export const MarkupTeacherCard = ({ teacher }) => {
           </ul>
 
           {isDescriptionOpen ? (
-            <MarkupReadMore experience={experience} reviews={reviews} />
+            <MarkupReadMore experience={experience} avatar={avatar_url} name={name} surname={surname} reviews={reviews} />
           ) : (
             <ReadMoreButton onClick={() => setIsDescriptionOpen(true)}>
               Read more
