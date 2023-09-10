@@ -2,11 +2,11 @@ import { MarkupTeachersList } from "components/MarkupTeachersList/MarkupTeachers
 import { PrioritySelect } from "components/PrioritySelect/PrioritySelect";
 import { Main } from "./TeacherPage.styled";
 
-export const TeacherPage = () => {
+export const TeacherPage = ({isFavorits}) => {
   return (
     <Main>
-      <PrioritySelect />
-      <MarkupTeachersList />
+      {!isFavorits?<PrioritySelect />:null }
+      <MarkupTeachersList isFavorits={isFavorits}/>
     </Main>
   );
 };

@@ -4,6 +4,8 @@ export const MainContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-y: auto;
+  
 `;
 
 export const List = styled.ul`
@@ -12,6 +14,8 @@ export const List = styled.ul`
   gap: 32px;
   margin-bottom: 64px;
   width: 100%;
+  /* height: 100vh;
+  overflow-y: auto; */
   
   @media screen and (min-width: 1245px) {
     width: 1184px;
