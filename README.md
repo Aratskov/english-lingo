@@ -1,5 +1,5 @@
 Learn Lingo
-<font size="1">Learn Lingo</font>
+<font size="5">Learn Lingo</font>
 
 Learn Lingo - це веб-додаток, розроблений на React, який допомагає користувачам
 знайти відповідного вчителя або репетитора для вивчення іноземної мови. За
